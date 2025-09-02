@@ -1,0 +1,22 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+redirects:
+  - from: /index
+    to: /README.md
+  - from: /home
+    to: /README.md
+
+configuration:
+  variables:
+    wiki_name: "블루스댄스 위키"
+    version: "1.0"
+    language: "ko"
+    
+settings:
+  edit: true
+  history: true
+  search: true

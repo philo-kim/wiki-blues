@@ -1,0 +1,32 @@
+{
+  "name": "blues-dance-wiki",
+  "version": "1.0.0",
+  "description": "블루스댄스 위키 - Blues Dance Wiki in Korean",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build",
+    "pdf": "gitbook pdf ./ ./blues-dance-wiki.pdf",
+    "epub": "gitbook epub ./ ./blues-dance-wiki.epub",
+    "mobi": "gitbook mobi ./ ./blues-dance-wiki.mobi",
+    "install-plugins": "gitbook install",
+    "clean": "rm -rf _book"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/blues-dance-wiki"
+  },
+  "keywords": [
+    "blues",
+    "dance",
+    "wiki",
+    "gitbook",
+    "korean"
+  ],
+  "author": "Blues Dance Community",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "dependencies": {}
+}

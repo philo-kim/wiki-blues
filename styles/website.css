@@ -1,0 +1,410 @@
+/* 블루스댄스 위키 스타일시트 */
+
+/* ==========================================
+   기본 설정
+   ========================================== */
+
+:root {
+  /* 색상 팔레트 - 블루스 테마 */
+  --primary-blue: #1e3a5f;
+  --secondary-blue: #4a6fa5;
+  --light-blue: #7090c0;
+  --dark-blue: #0d1929;
+  
+  /* 보조 색상 */
+  --warm-brown: #8b6b47;
+  --cream: #f5f2e8;
+  --charcoal: #2c2c2c;
+  --light-gray: #f0f0f0;
+  
+  /* 깊이 표시 색상 */
+  --depth-beginner: #7cb342;  /* 🌱 */
+  --depth-basic: #66bb6a;     /* 🌿 */
+  --depth-advanced: #43a047;  /* 🌳 */
+  --depth-expert: #2e7d32;    /* 🌲 */
+  
+  /* 간격 */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+  
+  /* 폰트 */
+  --font-serif: 'Noto Serif KR', 'Georgia', serif;
+  --font-sans: 'Noto Sans KR', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+}
+
+/* ==========================================
+   전역 스타일
+   ========================================== */
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  color: var(--charcoal);
+  background-color: var(--cream);
+}
+
+/* 제목 스타일 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--primary-blue);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--secondary-blue);
+  padding-bottom: var(--spacing-sm);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: var(--spacing-xxl);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-blue);
+}
+
+/* 링크 스타일 */
+a {
+  color: var(--secondary-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--light-blue);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-blue);
+  border-bottom: 2px solid var(--primary-blue);
+}
+
+/* ==========================================
+   깊이 표시
+   ========================================== */
+
+.depth-indicator {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: var(--spacing-sm);
+}
+
+.depth-beginner {
+  background-color: var(--depth-beginner);
+  color: white;
+}
+
+.depth-basic {
+  background-color: var(--depth-basic);
+  color: white;
+}
+
+.depth-advanced {
+  background-color: var(--depth-advanced);
+  color: white;
+}
+
+.depth-expert {
+  background-color: var(--depth-expert);
+  color: white;
+}
+
+/* ==========================================
+   인용구와 강조
+   ========================================== */
+
+blockquote {
+  border-left: 4px solid var(--secondary-blue);
+  padding-left: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+  color: #555;
+  background-color: rgba(74, 111, 165, 0.05);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 4px;
+}
+
+/* 생각해보기 박스 */
+blockquote p:first-child:before {
+  content: "💭 ";
+  font-size: 1.2em;
+}
+
+/* ==========================================
+   코드와 기술 요소
+   ========================================== */
+
+code {
+  font-family: var(--font-mono);
+  background-color: var(--light-gray);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: var(--dark-blue);
+}
+
+pre {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  color: white;
+  padding: 0;
+}
+
+/* ==========================================
+   테이블
+   ========================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0;
+}
+
+th {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+tr:hover {
+  background-color: rgba(74, 111, 165, 0.05);
+}
+
+/* ==========================================
+   상세 정보 (접기/펼치기)
+   ========================================== */
+
+details {
+  background-color: white;
+  border: 1px solid var(--light-blue);
+  border-radius: 6px;
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--secondary-blue);
+  padding: var(--spacing-sm);
+  user-select: none;
+}
+
+summary:hover {
+  color: var(--primary-blue);
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ==========================================
+   네비게이션
+   ========================================== */
+
+.book-summary {
+  background-color: var(--dark-blue) !important;
+}
+
+.book-summary ul.summary li a {
+  color: #ccc !important;
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.book-summary ul.summary li a:hover {
+  color: white !important;
+  background-color: var(--secondary-blue);
+  padding-left: var(--spacing-lg);
+}
+
+.book-summary ul.summary li.active > a {
+  color: white !important;
+  background-color: var(--primary-blue);
+  border-left: 4px solid var(--warm-brown);
+}
+
+/* ==========================================
+   특수 섹션
+   ========================================== */
+
+/* 연결된 주제들 */
+h2:contains("연결된 주제들") + ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+}
+
+/* 참고 자료 섹션 */
+h3:contains("📚") {
+  color: var(--warm-brown);
+  border-bottom: 2px solid var(--warm-brown);
+}
+
+/* 대화 섹션 */
+h3:contains("💬") {
+  color: var(--secondary-blue);
+  border-bottom: 2px solid var(--secondary-blue);
+}
+
+/* 질문 섹션 */
+h3:contains("❓") {
+  color: var(--light-blue);
+  border-bottom: 2px solid var(--light-blue);
+}
+
+/* ==========================================
+   반응형 디자인
+   ========================================== */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  
+  blockquote {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+/* ==========================================
+   인쇄 스타일
+   ========================================== */
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .book-summary,
+  .book-header,
+  .navigation {
+    display: none !important;
+  }
+  
+  .book-body {
+    position: static;
+    width: 100%;
+    margin: 0;
+  }
+  
+  a {
+    color: black;
+    border-bottom: 1px solid #999;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+/* ==========================================
+   애니메이션
+   ========================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-inner {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ==========================================
+   커스텀 클래스
+   ========================================== */
+
+/* 경험 박스 */
+.experience-box {
+  background-color: rgba(139, 107, 71, 0.1);
+  border-left: 4px solid var(--warm-brown);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  border-radius: 4px;
+}
+
+/* 역사 타임라인 */
+.timeline {
+  position: relative;
+  padding-left: var(--spacing-xxl);
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--secondary-blue);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+}
+
+/* 용어 강조 */
+.term {
+  font-weight: 600;
+  color: var(--primary-blue);
+  border-bottom: 2px dotted var(--light-blue);
+  cursor: help;
+}
+
+/* 화살표 링크 */
+a[href^="→"] {
+  padding-left: var(--spacing-md);
+  font-weight: 600;
+}

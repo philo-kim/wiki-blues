@@ -1,0 +1,46 @@
+{
+  "title": "블루스댄스 위키",
+  "description": "블루스댄스의 모든 것 - 역사, 문화, 움직임, 음악",
+  "language": "ko",
+  "plugins": [
+    "search-pro",
+    "collapsible-menu",
+    "toggle-chapters",
+    "theme-default",
+    "sharing",
+    "anchor-navigation-ex",
+    "expandable-chapters",
+    "youtube",
+    "videoclips"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+      "defineWord": ["블루스댄스", "Blues Aesthetic", "Idiom Dance", "Juke Joint", "Ballroomin", "Slow Drag"]
+    },
+    "sharing": {
+      "facebook": true,
+      "twitter": true,
+      "instagram": true,
+      "all": ["facebook", "twitter", "instagram", "linkedin"]
+    },
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    }
+  },
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css"
+  },
+  "variables": {
+    "wiki_name": "블루스댄스 위키",
+    "version": "1.0",
+    "last_updated": "2024"
+  }
+}
