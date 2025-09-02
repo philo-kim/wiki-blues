@@ -5,10 +5,8 @@ structure:
   summary: SUMMARY.md
 
 redirects:
-  - from: /index
-    to: /README.md
-  - from: /home
-    to: /README.md
+  "/index": "/README.md"
+  "/home": "/README.md"
 
 configuration:
   variables:
